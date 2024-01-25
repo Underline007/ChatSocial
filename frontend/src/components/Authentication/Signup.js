@@ -11,7 +11,7 @@ const Signup = () => {
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
   const toast = useToast();
-  const navigate = useNavigate(); // Thay thế history bằng useNavigate
+  const navigate = useNavigate();
 
   const [name, setName] = useState();
   const [email, setEmail] = useState();
@@ -70,7 +70,7 @@ const Signup = () => {
       });
       localStorage.setItem("userInfo", JSON.stringify(data));
       setPicLoading(false);
-      navigate('/chats'); // Sử dụng navigate thay thế cho history.push
+      navigate('/chats');
     } catch (error) {
       toast({
         title: "Error Occurred!",
